@@ -1,0 +1,9 @@
+input[type="number"] {
+  width: 6ch;
+}
+#max-castka {
+  width: 169px;
+}
+.hidden {
+  display: none;
+}

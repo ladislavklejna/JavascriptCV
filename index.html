@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Půjčovna kol</title>
+  </head>
+  <body>
+    <h2>Vyberte typ kola:</h2>
+    <form>
+      <input type="checkbox" id="horske" name="typ_kola" value="500" />
+      <input
+        type="number"
+        id="horske_pocet"
+        name="pocet"
+        min="0"
+        placeholder="ks"
+      />
+      <label for="horske">Horské kolo - 500 Kč/den</label>
+      <br />
+
+      <input type="checkbox" id="detske" name="typ_kola" value="200" />
+      <input
+        type="number"
+        id="detske_pocet"
+        name="pocet"
+        min="0"
+        placeholder="ks"
+      />
+      <label for="detske">Dětské kolo - 200 Kč/den</label>
+
+      <br />
+
+      <input type="checkbox" id="silnicni" name="typ_kola" value="1500" />
+      <input
+        type="number"
+        id="silnicni_pocet"
+        name="pocet"
+        min="0"
+        placeholder="ks"
+      />
+      <label for="silnicni">Silniční kolo - 1 500 Kč/den</label>
+      <br />
+
+      <input type="checkbox" id="gravel" name="typ_kola" value="2500" />
+      <input
+        type="number"
+        id="gravel_pocet"
+        name="pocet"
+        min="0"
+        placeholder="ks"
+      />
+      <label for="gravel">Gravel kolo - 2 500 Kč/den</label>
+
+      <br />
+      <h2>Vyberte počet dnů:</h2>
+      <select name="days">
+        <option value="5">5 dnů</option>
+        <option value="7">7 dnů</option>
+        <option value="14">14 dnů</option>
+        <option value="30">30 dnů</option>
+      </select>
+      <br />
+      <br />
+      <h2>Vyberte typ cyklonosiče:</h2>
+
+      <input type="radio" id="stresni" name="typ_cyklonosice" value="5" />
+      <label for="stresni"
+        >Cyklonosič střešní (+ 5% z celkové ceny zápůjčky navíc)</label
+      >
+      <br />
+
+      <input type="radio" id="tazne" name="typ_cyklonosice" value="10" />
+      <label for="tazne"
+        >Cyklonosič na tažné zařízení (+ 10% z celkové ceny zápůjčky
+        navíc)</label
+      >
+      <br />
+
+      <input
+        type="radio"
+        id="neni_potreba"
+        name="typ_cyklonosice"
+        checked
+        value="0"
+      />
+      <label for="neni_potreba">Není třeba cyklonosič</label>
+
+      <br />
+      <br />
+      <br />
+
+      <input
+        id="max-castka"
+        type="number"
+        min="0"
+        placeholder="Vaše maximalní částka"
+      />
+      <br />
+      <br />
+      <button id="vypocitej">Vypočet ceny</button>
+      <h2 id="sum">Celkem: ??</h2>
+      <h4 id="message" class="hidden"></h4>
+      <input type="email" name="email" placeholder="Váš email" />
+      <input id="mail-send" type="button" value="Odeslat" />
+      <h4 id="mail-message" class="hidden"></h4>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
